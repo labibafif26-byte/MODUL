@@ -1,0 +1,85 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=Inter:wght@300;400;500;600;700&family=Nunito:ital,wght@0,300;0,400;0,600;0,700;1,400&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", system-ui, -apple-system, sans-serif;
+  --font-heading: "Poppins", "Inter", sans-serif;
+  --font-body: "Nunito", "Inter", sans-serif;
+
+  /* Custom palette matching user's requested academic cream-aesthetic color variables */
+  --color-cream-principal: #F7F3ED;
+  --color-cream-soft: #EDE6DA;
+  --color-abu-muda: #E5E7EB;
+  --color-abu-sedang: #D1D5DB;
+  --color-teks-utama: #374151;
+  --color-teks-sekunder: #6B7280;
+  
+  --color-brand-green: #0D9488; /* Elegant academic Pine/Teal accent for success & progress */
+  --color-brand-green-light: #F0FDFA;
+}
+
+/* Custom scrollbar and smoothness overrides */
+html {
+  scroll-behavior: smooth;
+  font-family: var(--font-sans);
+  background-color: var(--color-cream-principal);
+  color: var(--color-teks-utama);
+}
+
+::selection {
+  background-color: #EDE6DA;
+  color: #111827;
+}
+
+/* Base scrollbar styling */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #F7F3ED;
+}
+::-webkit-scrollbar-thumb {
+  background: #D1D5DB;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #9CA3AF;
+}
+
+/* Clean typography custom styles */
+.typography-academic p {
+  margin-bottom: 1.25rem;
+  line-height: 1.8;
+  color: #374151;
+  font-size: 1.05rem;
+  text-align: justify;
+}
+
+.typography-academic h3 {
+  font-family: var(--font-heading);
+  font-weight: 600;
+  color: #111827;
+  margin-top: 1.75rem;
+  margin-bottom: 0.75rem;
+}
+
+.typography-academic ul, .typography-academic ol {
+  margin-bottom: 1.25rem;
+  padding-left: 1.5rem;
+}
+
+.typography-academic li {
+  margin-bottom: 0.5rem;
+  line-height: 1.6;
+}
+
+@keyframes pulse-soft {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.7; }
+}
+
+.animate-pulse-soft {
+  animation: pulse-soft 2s infinite ease-in-out;
+}
+
